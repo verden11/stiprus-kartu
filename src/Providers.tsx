@@ -1,4 +1,6 @@
 import React, { createContext, useState } from 'react';
+import merge from 'deepmerge';
+import { Language } from './common/constants';
 import { IntlProvider } from 'react-intl';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -6,16 +8,10 @@ import messages_lt from './translations/lt.json';
 import messages_en from './translations/en.json';
 import messages_ua from './translations/ua.json';
 
-enum Language {
-  Lithuanian = 'lt',
-  English = 'en',
-  Ukrainian = 'ua',
-}
-
-const messages = new Map<Language, Record<string, string>>([
-  [Language.Lithuanian, messages_lt],
+const messages = new Map<Language, Record<string, any>>([
+  [Language.Lithuanian, merge.all([messages_en, messages_lt])],
   [Language.English, messages_en],
-  [Language.Ukrainian, messages_ua],
+  [Language.Ukrainian, merge.all([messages_en, messages_ua])],
 ]);
 
 interface IProvidersContext {
