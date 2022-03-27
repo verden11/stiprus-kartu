@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { LocalRoute } from './common/constants/routes';
+import { Footer } from './common/footer/Footer';
 
 import Header from './common/header/Header';
 
@@ -50,6 +51,7 @@ const App = () => {
           <Route path="*" element={<Navigate to={LocalRoute.Home} replace />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 };

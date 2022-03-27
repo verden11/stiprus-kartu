@@ -8,7 +8,7 @@ import { LocalRoute } from '../constants/routes';
 const Header = () => {
   const { language, setLanguage } = useContext(ProvidersContext);
   return (
-    <div className="flex flex-row justify-between p-4">
+    <div className="flex flex-row flex-wrap justify-between p-4">
       <Link to="/">
         #
         <FormattedMessage id="strongTogether" />
@@ -26,7 +26,7 @@ const Header = () => {
         <FormattedMessage id="info" />
       </Link>
 
-      <label htmlFor="language">pasirinkite kalba:</label>
+      <label htmlFor="language">Language:</label>
       <select
         name="language"
         id="language"

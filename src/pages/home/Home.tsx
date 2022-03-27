@@ -10,9 +10,9 @@ import union from '../../assets/ukraine-union.svg';
 const Home = () => {
   return (
     <div className="mx-14">
-      <section className="flex flex-1 flex-row justify-around">
+      <section className="flex flex-1 flex-row justify-around items-center">
         <img src={logo} alt="logo" />
-        <p className="text-3xl font-bold ml-8">Assistance for war refugees from Ukraine</p>
+        <p className="md:text-3xl font-bold ml-8">Assistance for war refugees from Ukraine</p>
         <div className="flex-col">
           <div className="flex flex-col">
             <a href="tel:1827" className="font-bold">
@@ -46,21 +46,21 @@ const Home = () => {
         />
       </section>
 
-      <section>
+      <section className="my-14">
         <p className="text-2xl font-normal mb-10">People in Lithuania have already offered:</p>
         <div className="flex flex-1 flex-row justify-around">
-          <div className="flex flex-1 justify-center">
+          <div className="flex flex-1 flex-wrap justify-center">
             <img width={54} height={54} src={house} alt="hosue" />
-            <div className="ml-8">
+            <div className="md:ml-8 flex flex-col items-center">
               <p className="text-4xl font-bold">10119</p>
-              <p className="text-lg">places to stay</p>
+              <p className="text-lg text-center">places to stay</p>
             </div>
           </div>
-          <div className="flex flex-1 justify-center">
+          <div className="flex flex-1 flex-wrap justify-center">
             <img width={54} height={54} src={car} alt="car" />
-            <div className="ml-8">
+            <div className="md:ml-8 flex flex-col items-center">
               <p className="text-4xl font-bold">5009</p>
-              <p className="text-lg">rides from the border</p>
+              <p className="text-lg text-center">rides from the border</p>
             </div>
           </div>
         </div>
@@ -71,9 +71,9 @@ const Home = () => {
           className="flex flex-1 flex-col items-center text-white py-7 bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${union})` }}
         >
-          <p className="text-3xl font-bold">Ukraine needs you.</p>
-          <p className="text-3xl font-bold mb-7">We're strong together!</p>
-          <p className="text-2xl font-normal">National volunteer support coordination center</p>
+          <p className="text-3xl font-bold text-center">Ukraine needs you.</p>
+          <p className="text-3xl font-bold text-center mb-7">We're strong together!</p>
+          <p className="text-2xl font-normal text-center">National volunteer support coordination center</p>
         </div>
       </section>
     </div>
