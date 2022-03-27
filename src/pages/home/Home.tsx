@@ -33,15 +33,15 @@ const Home = () => {
         <Card
           title="Fleeing war in Ukraine?"
           description="We'll find you a temporary home in Lithuania. Sign up, and our volunteers will take care of you."
-          buttons={[{ text: 'Get help', color: 'foo', link: '/' }]}
+          buttons={[{ text: 'Get help', color: 'bg-red-500', link: '/' }]}
         />
 
         <Card
           title="Do you have a vacant flat, house, or room? Can you offer a ride?"
           description="Sign up to help people fleeing war in Ukraine."
           buttons={[
-            { text: 'Offer accommodation', color: 'foo', link: '/' },
-            { text: 'Offer a ride from the border', color: 'foo', link: '/' },
+            { text: 'Offer accommodation', color: 'bg-slate-600', link: '/' },
+            { text: 'Offer a ride from the border', color: 'bg-slate-600', link: '/' },
           ]}
         />
       </section>
