@@ -1,14 +1,19 @@
 import { Suspense, lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { LocalRoute } from './common/constants/routes';
+
 import Header from './common/header/Header';
 
 const Home = lazy(() => import('./pages/home/Home'));
+const Donate = lazy(() => import('./pages/donate/Donate'));
+const Info = lazy(() => import('./pages/info/Info'));
+const News = lazy(() => import('./pages/news/News'));
 
 const App = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <div className="flex-1 bg-neutral-200">
+      <div className="flex-1 bg-gray-200">
         <Routes>
           <Route
             path="/"
@@ -19,29 +24,30 @@ const App = () => {
             }
           />
           <Route
-            path="/a"
+            path={LocalRoute.Info}
             element={
               <Suspense fallback={null}>
-                <h1>home A</h1>
+                <Info />
               </Suspense>
             }
           />
           <Route
-            path="/b"
+            path={LocalRoute.News}
             element={
               <Suspense fallback={null}>
-                <h1>home B</h1>
+                <News />
               </Suspense>
             }
           />
           <Route
-            path="/c"
+            path={LocalRoute.Donate}
             element={
               <Suspense fallback={null}>
-                <h1>home C</h1>
+                <Donate />
               </Suspense>
             }
           />
+          <Route path="*" element={<Navigate to={LocalRoute.Home} replace />} />
         </Routes>
       </div>
     </div>

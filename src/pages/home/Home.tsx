@@ -1,7 +1,11 @@
 import { memo } from 'react';
 import { FormattedMessage } from 'react-intl';
-import logo from '../../assets/stipruskartu_logo.svg';
 import { Card } from './Card';
+
+import logo from '../../assets/stipruskartu_logo.svg';
+import car from '../../assets/car.svg';
+import house from '../../assets/house.svg';
+import union from '../../assets/ukraine-union.svg';
 
 const Home = () => {
   return (
@@ -24,6 +28,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section>
         <Card
           title="Fleeing war in Ukraine?"
@@ -42,10 +47,33 @@ const Home = () => {
       </section>
 
       <section>
-        <p>People in Lithuania have already offered:</p>
+        <p className="text-2xl font-normal mb-10">People in Lithuania have already offered:</p>
         <div className="flex flex-1 flex-row justify-around">
-          <p>homes</p>
-          <p>cars</p>
+          <div className="flex flex-1 justify-center">
+            <img width={54} height={54} src={house} alt="hosue" />
+            <div className="ml-8">
+              <p className="text-4xl font-bold">10119</p>
+              <p className="text-lg">places to stay</p>
+            </div>
+          </div>
+          <div className="flex flex-1 justify-center">
+            <img width={54} height={54} src={car} alt="car" />
+            <div className="ml-8">
+              <p className="text-4xl font-bold">5009</p>
+              <p className="text-lg">rides from the border</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-800 -mx-14">
+        <div
+          className="flex flex-1 flex-col items-center text-white py-7 bg-no-repeat bg-center"
+          style={{ backgroundImage: `url(${union})` }}
+        >
+          <p className="text-3xl font-bold">Ukraine needs you.</p>
+          <p className="text-3xl font-bold mb-7">We're strong together!</p>
+          <p className="text-2xl font-normal">National volunteer support coordination center</p>
         </div>
       </section>
     </div>

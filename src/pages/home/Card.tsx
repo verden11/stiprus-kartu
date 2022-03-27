@@ -11,7 +11,7 @@ interface ICard {
 
 export const Card: React.FC<ICard> = ({ title, description, buttons }) => {
   return (
-    <div className="flex flex-1 flex-row border border-black rounded p-7 m-3">
+    <div className="flex flex-1 flex-row border border-black rounded p-7 my-3">
       <div className="flex flex-1 flex-col">
         <p>{title}</p>
         <p>{description}</p>
