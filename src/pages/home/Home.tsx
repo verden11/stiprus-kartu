@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="mx-14">
       <section className="flex flex-1 flex-row justify-around items-center">
-        <img src={logo} alt="logo" />
+        <img src={logo} width={64} height={64} alt="logo" />
         <p className="md:text-3xl font-bold ml-8">Assistance for war refugees from Ukraine</p>
         <div className="flex-col">
           <div className="flex flex-col">
