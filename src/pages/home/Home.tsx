@@ -36,7 +36,7 @@ const Home = () => {
         <Card
           title="Fleeing war in Ukraine?"
           description="We'll find you a temporary home in Lithuania. Sign up, and our volunteers will take care of you."
-          buttons={[{ text: 'Get help', color: 'bg-amber-700', link: '/' }]}
+          buttons={[{ text: 'Get help', color: 'bg-amber-700', link: LocalRoute.FormHelp }]}
         />
 
         <Card

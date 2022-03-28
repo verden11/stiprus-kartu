@@ -9,6 +9,7 @@ const Home = lazy(() => import('./pages/home/Home'));
 const Donate = lazy(() => import('./pages/donate/Donate'));
 const Info = lazy(() => import('./pages/info/Info'));
 const News = lazy(() => import('./pages/news/News'));
+const FormHelp = lazy(() => import('./pages/form-help/FormHelp'));
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <div className="flex flex-1 justify-center bg-stone-200">
         <Routes>
           <Route
-            path="/"
+            path={LocalRoute.Home}
             element={
               <Suspense fallback={null}>
                 <Home />
@@ -45,6 +46,14 @@ const App = () => {
             element={
               <Suspense fallback={null}>
                 <Donate />
+              </Suspense>
+            }
+          />
+          <Route
+            path={LocalRoute.FormHelp}
+            element={
+              <Suspense fallback={null}>
+                <FormHelp />
               </Suspense>
             }
           />

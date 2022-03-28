@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { Link } from 'react-router-dom';
 
 interface IButton {
   text: string;
@@ -21,7 +22,12 @@ export const Card: React.FC<ICard> = ({ title, description, buttons }) => {
       <div className="flex flex-1 flex-col justify-around">
         {buttons.map((button) => (
           <div key={button.text} className="flex flex-col md:mx-12 my-2">
-            <button className={cx('rounded-md py-4 text-lg font-bold text-white', button.color)}>{button.text}</button>
+            <Link
+              to={button.link}
+              className={cx('text-center rounded-md py-4 text-lg font-bold text-white', button.color)}
+            >
+              {button.text}
+            </Link>
           </div>
         ))}
       </div>

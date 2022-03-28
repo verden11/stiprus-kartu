@@ -3,4 +3,5 @@ export enum LocalRoute {
   Info = '/info',
   News = '/news',
   Donate = '/donate',
+  FormHelp = '/form-help',
 }
