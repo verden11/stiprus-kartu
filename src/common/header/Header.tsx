@@ -1,32 +1,34 @@
+import cx from 'classnames';
 import { memo, useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import { Link, useLocation } from 'react-router-dom';
 import { ProvidersContext } from '../../Providers';
 import { Language } from '../constants';
 import { LocalRoute } from '../constants/routes';
 
 const Header = () => {
   const { language, setLanguage } = useContext(ProvidersContext);
+  const { pathname } = useLocation();
+
   return (
-    <div className="flex flex-row flex-wrap justify-between p-4">
-      <Link to="/">
-        #
+    <div className="flex flex-wrap justify-between py-3 px-9 items-center text-base font-bold">
+      <Link to="/" className="text-slate-600 text-2xl md:text-3xl font-bold">
+        <span className="text-red-500">#</span>
         <FormattedMessage id="strongTogether" />
       </Link>
-      <Link to={LocalRoute.Home} className="capitalize">
+      <Link to={LocalRoute.Home} className={cx('capitalize', pathname === LocalRoute.Home && 'text-red-500')}>
         <FormattedMessage id="home" />
       </Link>
-      <Link to={LocalRoute.Donate} className="capitalize">
+      <Link to={LocalRoute.Donate} className={cx('capitalize', pathname === LocalRoute.Donate && 'text-red-500')}>
         <FormattedMessage id="donate" />
       </Link>
-      <Link to={LocalRoute.News} className="capitalize">
+      <Link to={LocalRoute.News} className={cx('capitalize', pathname === LocalRoute.News && 'text-red-500')}>
         <FormattedMessage id="news" />
       </Link>
-      <Link to={LocalRoute.Info} className="capitalize">
+      <Link to={LocalRoute.Info} className={cx('capitalize', pathname === LocalRoute.Info && 'text-red-500')}>
         <FormattedMessage id="info" />
       </Link>
 
-      <label htmlFor="language">Language:</label>
       <select
         name="language"
         id="language"

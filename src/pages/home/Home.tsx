@@ -1,27 +1,27 @@
 import { memo } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Card } from './Card';
-
-import logo from '../../assets/stipruskartu_logo.svg';
 import car from '../../assets/car.svg';
 import house from '../../assets/house.svg';
+import logo from '../../assets/stipruskartu_logo.svg';
 import union from '../../assets/ukraine-union.svg';
+import { Card } from './Card';
+
 
 const Home = () => {
   return (
-    <div className="mx-14">
-      <section className="flex flex-1 flex-row justify-around items-center">
+    <div className="max-w-6xl mx-6 md:mx-14 pt-3">
+      <section className="flex flex-1 flex-row-reverse md:flex-row justify-around items-center">
         <img src={logo} width={64} height={64} alt="logo" />
-        <p className="md:text-3xl font-bold ml-8">Assistance for war refugees from Ukraine</p>
-        <div className="flex-col">
-          <div className="flex flex-col">
-            <a href="tel:1827" className="font-bold">
+        <p className="flex-1 md:text-3xl font-bold md:mx-8">Assistance for war refugees from Ukraine</p>
+        <div className="flex-col hidden md:flex">
+          <div className="flex flex-col text-sm">
+            <a href="tel:1827" className="font-bold text-base">
               1827
             </a>
             <FormattedMessage id="fromLithuania" />
           </div>
-          <div className="flex flex-col">
-            <a href="tel:+37067722222" className="font-bold">
+          <div className="flex flex-col text-sm">
+            <a href="tel:+37067722222" className="font-bold text-base">
               +370 677 22222
             </a>
             <FormattedMessage id="fromAbroad" />
@@ -49,14 +49,14 @@ const Home = () => {
       <section className="my-14">
         <p className="text-2xl font-normal mb-10">People in Lithuania have already offered:</p>
         <div className="flex flex-1 flex-row justify-around">
-          <div className="flex flex-1 flex-wrap justify-center">
+          <div className="flex flex-1 flex-wrap justify-center items-center">
             <img width={54} height={54} src={house} alt="hosue" />
             <div className="md:ml-8 flex flex-col items-center">
               <p className="text-4xl font-bold">10119</p>
               <p className="text-lg text-center">places to stay</p>
             </div>
           </div>
-          <div className="flex flex-1 flex-wrap justify-center">
+          <div className="flex flex-1 flex-wrap justify-center items-center">
             <img width={54} height={54} src={car} alt="car" />
             <div className="md:ml-8 flex flex-col items-center">
               <p className="text-4xl font-bold">5009</p>
@@ -66,7 +66,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-slate-800 -mx-14">
+      <section className="bg-slate-800 -mx-6 md:-mx-14">
         <div
           className="flex flex-1 flex-col items-center text-white py-7 bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${union})` }}

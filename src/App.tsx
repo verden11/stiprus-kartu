@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <div className="flex-1 bg-gray-200">
+      <div className="flex flex-1 justify-center bg-gray-200">
         <Routes>
           <Route
             path="/"
