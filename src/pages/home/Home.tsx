@@ -6,11 +6,10 @@ import logo from '../../assets/stipruskartu_logo.svg';
 import union from '../../assets/ukraine-union.svg';
 import { Card } from './Card';
 
-
 const Home = () => {
   return (
     <div className="max-w-6xl mx-6 md:mx-14 pt-3">
-      <section className="flex flex-1 flex-row-reverse md:flex-row justify-around items-center">
+      <section className="flex flex-1 flex-row-reverse md:flex-row justify-around items-center my-8">
         <img src={logo} width={64} height={64} alt="logo" />
         <p className="flex-1 md:text-3xl font-bold md:mx-8">Assistance for war refugees from Ukraine</p>
         <div className="flex-col hidden md:flex">
@@ -33,15 +32,15 @@ const Home = () => {
         <Card
           title="Fleeing war in Ukraine?"
           description="We'll find you a temporary home in Lithuania. Sign up, and our volunteers will take care of you."
-          buttons={[{ text: 'Get help', color: 'bg-red-500', link: '/' }]}
+          buttons={[{ text: 'Get help', color: 'bg-amber-700', link: '/' }]}
         />
 
         <Card
           title="Do you have a vacant flat, house, or room? Can you offer a ride?"
           description="Sign up to help people fleeing war in Ukraine."
           buttons={[
-            { text: 'Offer accommodation', color: 'bg-slate-600', link: '/' },
-            { text: 'Offer a ride from the border', color: 'bg-slate-600', link: '/' },
+            { text: 'Offer accommodation', color: 'bg-teal-800', link: '/' },
+            { text: 'Offer a ride from the border', color: 'bg-teal-800', link: '/' },
           ]}
         />
       </section>
@@ -66,7 +65,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-slate-800 -mx-6 md:-mx-14">
+      <section className="bg-teal-900 -mx-6 md:-mx-14">
         <div
           className="flex flex-1 flex-col items-center text-white py-7 bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${union})` }}
