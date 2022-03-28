@@ -4,7 +4,11 @@ import car from '../../assets/car.svg';
 import house from '../../assets/house.svg';
 import logo from '../../assets/stipruskartu_logo.svg';
 import union from '../../assets/ukraine-union.svg';
+import flag from '../../assets/ua_flag.svg';
+import arrowright from '../../assets/arrowright.svg';
 import { Card } from './Card';
+import { Link } from 'react-router-dom';
+import { LocalRoute } from '../../common/constants/routes';
 
 const Home = () => {
   return (
@@ -73,6 +77,27 @@ const Home = () => {
           <p className="text-3xl font-bold text-center">Ukraine needs you.</p>
           <p className="text-3xl font-bold text-center mb-7">We're strong together!</p>
           <p className="text-2xl font-normal text-center">National volunteer support coordination center</p>
+        </div>
+      </section>
+      <section>
+        <p className="capitalize py-4 font-normal text-2xl">
+          <FormattedMessage id="news" />
+        </p>
+        <div className="flex flex-1 flex-row py-4">
+          <p className="max-w-xs pr-4">INFORMATION FOR UKRAINIAN NATIONALS AND THEIR FAMILY MEMBERS</p>
+          <img className="rounded" src={flag} width={130} height={90} alt="logo" />
+        </div>
+        <Link to={LocalRoute.News} className="inline-flex text-teal-800">
+          <p className="capitalize mr-2">more</p>
+          <img className="rounded" src={arrowright} width={20} height={20} alt="logo" />
+        </Link>
+      </section>
+
+      <section className="my-14">
+        <div className="flex justify-center py-4">
+          <p className="font-bold text-4xl max-w-sm text-center leading-10">
+            #StrongTogether is the initiative of the Pelėdos squad in the Lithuanian Riflemen's Union
+          </p>
         </div>
       </section>
     </div>

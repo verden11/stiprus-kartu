@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Footer = () => {
   return (
-    <div className="flex flex-1 flex-col mx-6 md:mx-14">
+    <div className="flex flex-1 flex-col px-6 md:px-14 py-7 md:py-12 bg-stone-300">
       <p>© 2022 Stiprūs Kartu</p>
       <div className="flex flex-1 flex-row justify-between flex-wrap">
         <div className="flex-col">
@@ -15,7 +15,7 @@ export const Footer = () => {
           </p>
         </div>
         <div>
-          <p>Sprendimo Partnernis</p>
+          <p>Solution</p>
           <p>Insert Here</p>
         </div>
       </div>
