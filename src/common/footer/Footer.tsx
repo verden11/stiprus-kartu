@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className="flex flex-1 flex-col px-6 md:px-14 py-7 md:py-12 bg-stone-300">
       <p>© 2022 Stiprūs Kartu</p>

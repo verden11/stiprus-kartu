@@ -1,9 +1,9 @@
 import { Suspense, lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { LocalRoute } from './common/constants/routes';
-import { Footer } from './common/footer/Footer';
 
-import Header from './common/header/Header';
+const Header = lazy(() => import('./common/header/Header'));
+const Footer = lazy(() => import('./common/footer/Footer'));
 
 const Home = lazy(() => import('./pages/home/Home'));
 const Donate = lazy(() => import('./pages/donate/Donate'));
