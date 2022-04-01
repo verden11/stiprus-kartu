@@ -6,6 +6,7 @@ import logo from '../../assets/stipruskartu_logo.svg';
 import union from '../../assets/ukraine-union.svg';
 import flag from '../../assets/ua_flag.svg';
 import arrowright from '../../assets/arrowright.svg';
+import savanoriaiLogo from '../../assets/savanoriai-logo.png';
 import { Card } from './Card';
 import { Link } from 'react-router-dom';
 import { LocalRoute } from '../../common/constants/routes';
@@ -69,6 +70,18 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="my-14">
+        <iframe
+          id="front-page-iframe"
+          src="https://stiprus-kartu.maps.arcgis.com/apps/instant/basic/index.html?appid=1f7fa81be1184b36b77cf7249f4353f2"
+          title="map"
+          className="border-0 w-full h-96 rounded"
+          loading="lazy"
+        >
+          iFrames are not supported on this page.
+        </iframe>
+      </section>
+
       <section className="bg-teal-900 -mx-6 md:-mx-14">
         <div
           className="flex flex-1 flex-col items-center text-white py-7 bg-no-repeat bg-center"
@@ -83,9 +96,20 @@ const Home = () => {
         <p className="capitalize py-4 font-normal text-2xl">
           <FormattedMessage id="news" />
         </p>
-        <div className="flex flex-1 flex-row py-4">
-          <p className="max-w-xs pr-4">INFORMATION FOR UKRAINIAN NATIONALS AND THEIR FAMILY MEMBERS</p>
-          <img className="rounded" src={flag} width={130} height={90} alt="logo" />
+        <div className="flex flex-1 flex-wrap justify-between">
+          <div>
+            <div className="flex flex-1 flex-row py-4">
+              <p className="max-w-xs pr-4">INFORMATION FOR UKRAINIAN NATIONALS AND THEIR FAMILY MEMBERS</p>
+              <img className="rounded" src={flag} width={130} height={90} alt="logo" />
+            </div>
+          </div>
+
+          <div>
+            <div className="flex flex-1 flex-row py-4">
+              <p className="max-w-xs pr-4">Ačiū, #StiprūsKartu savanoriai!</p>
+              <img className="rounded" src={savanoriaiLogo} width={130} height={90} alt="logo" />
+            </div>
+          </div>
         </div>
         <Link to={LocalRoute.News} className="inline-flex text-teal-800">
           <p className="capitalize mr-2">more</p>

@@ -5,5 +5,8 @@
   "info": "info",
   "strongTogether": "StrongTogether",
   "fromLithuania": "from Lithuania",
-  "fromAbroad": "from abroad"
+  "fromAbroad": "from abroad",
+  "accommodationAgreement": "Accommodation agreement",
+  "accommodationAgreementSubText": "The agreement is signed by a host and a person accepting accommodation.",
+  "downloadAgreement": "Download agreement"
 }
