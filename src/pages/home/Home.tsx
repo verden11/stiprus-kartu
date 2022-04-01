@@ -5,7 +5,7 @@ import house from '../../assets/house.svg';
 import logo from '../../assets/stipruskartu_logo.svg';
 import union from '../../assets/ukraine-union.svg';
 import flag from '../../assets/ua_flag.svg';
-import arrowright from '../../assets/arrowright.svg';
+import arrowRight from '../../assets/arrowRight.svg';
 import savanoriaiLogo from '../../assets/savanoriai-logo.png';
 import { Card } from './Card';
 import { Link } from 'react-router-dom';
@@ -44,8 +44,8 @@ const Home = () => {
           title="Do you have a vacant flat, house, or room? Can you offer a ride?"
           description="Sign up to help people fleeing war in Ukraine."
           buttons={[
-            { text: 'Offer accommodation', color: 'bg-teal-800', link: '/' },
-            { text: 'Offer a ride from the border', color: 'bg-teal-800', link: '/' },
+            { text: 'Offer accommodation', color: 'bg-teal-800', link: LocalRoute.FormAccommodation },
+            { text: 'Offer a ride from the border', color: 'bg-teal-800', link: LocalRoute.FormRide },
           ]}
         />
       </section>
@@ -113,7 +113,7 @@ const Home = () => {
         </div>
         <Link to={LocalRoute.News} className="inline-flex text-teal-800">
           <p className="capitalize mr-2">more</p>
-          <img className="rounded" src={arrowright} width={20} height={20} alt="logo" />
+          <img className="rounded" src={arrowRight} width={20} height={20} alt="logo" />
         </Link>
       </section>
 

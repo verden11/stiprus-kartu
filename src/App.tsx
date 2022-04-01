@@ -10,6 +10,8 @@ const Donate = lazy(() => import('./pages/donate/Donate'));
 const Info = lazy(() => import('./pages/info/Info'));
 const News = lazy(() => import('./pages/news/News'));
 const FormHelp = lazy(() => import('./pages/form-help/FormHelp'));
+const FormRide = lazy(() => import('./pages/form-ride/FormRide'));
+const FormAccommodation = lazy(() => import('./pages/form-accommodation/FormAccommodation'));
 
 const App = () => {
   return (
@@ -54,6 +56,22 @@ const App = () => {
             element={
               <Suspense fallback={null}>
                 <FormHelp />
+              </Suspense>
+            }
+          />
+          <Route
+            path={LocalRoute.FormRide}
+            element={
+              <Suspense fallback={null}>
+                <FormRide />
+              </Suspense>
+            }
+          />
+          <Route
+            path={LocalRoute.FormAccommodation}
+            element={
+              <Suspense fallback={null}>
+                <FormAccommodation />
               </Suspense>
             }
           />
