@@ -4,13 +4,15 @@
   "news": "news",
   "info": "info",
   "strongTogether": "StrongTogether",
+  "strongTogether2": "Strong Together",
+  "solution": "Solution",
   "fromLithuania": "from Lithuania",
   "fromAbroad": "from abroad",
   "accommodationAgreement": "Accommodation agreement",
   "accommodationAgreementSubText": "The agreement is signed by a host and a person accepting accommodation.",
   "downloadAgreement": "Download agreement",
   "donateSubText": "Information to support the activities of the Volunteer Coordination Center",
-  "informationForUkrainian": "information for ukrainian nationals and their family members",
+  "informationForUkrainian": "Information for ukrainian nationals and their family members",
   "thankYou": "Thank you",
   "volunteer": "volunteer",
   "more": "more",
@@ -24,5 +26,8 @@
   "form.dob": "Date of birth",
   "form.addressUA": "Address in Ukraine",
   "form.sex": "Sex",
-  "form.nationality": "Nationality"
+  "form.nationality": "Nationality",
+  "footer.companyCode": "Company code",
+  "footer.address": "Address",
+  "footer.bankAccount": "Bank account"
 }

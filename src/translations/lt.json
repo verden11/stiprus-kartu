@@ -1,6 +1,11 @@
 {
   "home": "pagrindinis",
   "donate": "paremkite iniciatyvą",
+  "strongTogether2": "Stiprūs Kartu",
+  "solution": "Sprendimo partneris",
   "news": "naujienos",
-  "info": "informacija"
+  "info": "informacija",
+  "footer.companyCode": "Įmonės kodas",
+  "footer.address": "Adresas",
+  "footer.bankAccount": "Banko sąskaitos Nr."
 }
