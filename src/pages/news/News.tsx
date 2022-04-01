@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { LocalRoute } from '../../common/constants/routes';
 import flag from '../../assets/ua_flag.svg';
 import savanoriaiLogo from '../../assets/savanoriai-logo.png';
-import arrowright from '../../assets/arrowright.svg';
+import arrowRight from '../../assets/arrowRight.svg';
 
 const News = () => {
   return (
@@ -34,7 +34,7 @@ const News = () => {
       </div>
       <Link to={LocalRoute.News} className="inline-flex text-teal-800">
         <p className="capitalize mr-2">more</p>
-        <img className="rounded" src={arrowright} width={20} height={20} alt="logo" />
+        <img className="rounded" src={arrowRight} width={20} height={20} alt="logo" />
       </Link>
     </div>
   );

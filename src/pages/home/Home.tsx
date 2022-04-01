@@ -99,20 +99,25 @@ const Home = () => {
         <div className="flex flex-1 flex-wrap justify-between">
           <div>
             <div className="flex flex-1 flex-row py-4">
-              <p className="max-w-xs pr-4">INFORMATION FOR UKRAINIAN NATIONALS AND THEIR FAMILY MEMBERS</p>
+              <Link to={LocalRoute.InfoForUkrainians} className="hover:underline max-w-xs pr-4 uppercase text-teal-800">
+                <FormattedMessage id="informationForUkrainian" />
+              </Link>
               <img className="rounded" src={flag} width={130} height={90} alt="logo" />
             </div>
           </div>
 
           <div>
             <div className="flex flex-1 flex-row py-4">
-              <p className="max-w-xs pr-4">Ačiū, #StiprūsKartu savanoriai!</p>
+              <Link to={LocalRoute.ThankYou} className="hover:underline max-w-xs pr-4 text-teal-800">
+                <FormattedMessage id="thankYou" />, #
+                <FormattedMessage id="strongTogether" /> <FormattedMessage id="volunteer" />!
+              </Link>
               <img className="rounded" src={savanoriaiLogo} width={130} height={90} alt="logo" />
             </div>
           </div>
         </div>
-        <Link to={LocalRoute.News} className="inline-flex text-teal-800">
-          <p className="capitalize mr-2">more</p>
+        <Link to={LocalRoute.News} className="hover:underline inline-flex text-teal-800 capitalize mr-2">
+          <FormattedMessage id="more" />
           <img className="rounded" src={arrowRight} width={20} height={20} alt="logo" />
         </Link>
       </section>
