@@ -13,5 +13,16 @@
   "informationForUkrainian": "information for ukrainian nationals and their family members",
   "thankYou": "Thank you",
   "volunteer": "volunteer",
-  "more": "more"
+  "more": "more",
+  "temporaryHome": "We'll find you a temporary home in Lithuania (up to 3 months free)",
+  "fillTheForm": "Fill in the form, and our volunteers will take care of you.",
+  "PersonalInfo": "Personal info",
+  "form.required": "this field is required",
+  "form.fullName": "First and last name",
+  "form.email": "Email",
+  "form.phone": "Phone number",
+  "form.dob": "Date of birth",
+  "form.addressUA": "Address in Ukraine",
+  "form.sex": "Sex",
+  "form.nationality": "Nationality"
 }
