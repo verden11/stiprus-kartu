@@ -10,7 +10,7 @@ const Footer = () => {
           <p>Adresas: P. Vileišio 18A, Vilnius</p>
           <p>Banko sąskaitos Nr.: LT387044090101401806</p>
           <p>AB SEB bankas</p>
-          <p>
+          <p className="text-teal-800 hover:underline">
             <a href="mailto:mes@stipruskartu.lt">mes@stipruskartu.lt</a>
           </p>
         </div>

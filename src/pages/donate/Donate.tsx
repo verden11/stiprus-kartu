@@ -19,9 +19,11 @@ const Donate = () => {
         <p>AB SEB bankas</p>
       </div>
 
-      <a href="mailto:mes@stipruskartu.lt" className="text-teal-800">
-        mes@stipruskartu.lt
-      </a>
+      <div className="my-3">
+        <a href="mailto:mes@stipruskartu.lt" className="text-teal-800 hover:underline">
+          mes@stipruskartu.lt
+        </a>
+      </div>
 
       <form target="_blank" action="https://www.paypal.com/donate" method="post" className="my-9">
         <input type="hidden" name="hosted_button_id" value="Q9N2KYT5YLBP4" />

@@ -15,12 +15,21 @@ const News = () => {
       <div className="flex flex-1 flex-wrap">
         <div className="flex flex-1 flex-col">
           <img className="rounded" src={flag} width="50%" height={90} alt="logo" />
-          <p className="max-w-xs pr-4">INFORMATION FOR UKRAINIAN NATIONALS AND THEIR FAMILY MEMBERS</p>
+          <Link to={LocalRoute.InfoForUkrainians} className="hover:underline">
+            <p className="max-w-xs pr-4 uppercase text-teal-800">
+              <FormattedMessage id="informationForUkrainian" />
+            </p>
+          </Link>
         </div>
 
         <div className="flex flex-1 flex-col">
           <img className="rounded" src={savanoriaiLogo} width="50%" height={90} alt="logo" />
-          <p className="max-w-xs pr-4">Ačiū, #StiprūsKartu savanoriai!</p>
+          <Link to={LocalRoute.ThankYou} className="hover:underline">
+            <p className="max-w-xs pr-4 text-teal-800">
+              <FormattedMessage id="thankYou" />, #
+              <FormattedMessage id="strongTogether" /> <FormattedMessage id="volunteer" />!
+            </p>
+          </Link>
         </div>
       </div>
       <Link to={LocalRoute.News} className="inline-flex text-teal-800">

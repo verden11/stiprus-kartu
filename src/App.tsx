@@ -9,6 +9,9 @@ const Home = lazy(() => import('./pages/home/Home'));
 const Donate = lazy(() => import('./pages/donate/Donate'));
 const Info = lazy(() => import('./pages/info/Info'));
 const News = lazy(() => import('./pages/news/News'));
+const InfoForUkrainians = lazy(() => import('./pages/info-for-ukrainians/InfoForUkrainians'));
+const ThankYou = lazy(() => import('./pages/thank-you/ThankYou'));
+
 const FormHelp = lazy(() => import('./pages/form-help/FormHelp'));
 const FormRide = lazy(() => import('./pages/form-ride/FormRide'));
 const FormAccommodation = lazy(() => import('./pages/form-accommodation/FormAccommodation'));
@@ -40,6 +43,22 @@ const App = () => {
             element={
               <Suspense fallback={null}>
                 <News />
+              </Suspense>
+            }
+          />
+          <Route
+            path={LocalRoute.InfoForUkrainians}
+            element={
+              <Suspense fallback={null}>
+                <InfoForUkrainians />
+              </Suspense>
+            }
+          />
+          <Route
+            path={LocalRoute.ThankYou}
+            element={
+              <Suspense fallback={null}>
+                <ThankYou />
               </Suspense>
             }
           />
