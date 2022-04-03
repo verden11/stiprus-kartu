@@ -45,5 +45,11 @@
   "home.banner.strongTogether": "We're strong together!",
   "home.banner.coordinationCenter": "National volunteer support coordination center",
   "home.hashtag.strongTogether": "#StrongTogether is the initiative of the Pelėdos squad in the Lithuanian Riflemen's Union",
-  "news.link.more": "more"
+  "news.link.more": "more",
+  "donate.company.name": "VŠĮ “Stiprūs kartu”",
+  "donate.company.code": "Company code:",
+  "donate.company.address": "Address: P. Vileišio 18A, Vilnius",
+  "donate.company.bankAccount": "Bank account number:",
+  "donate.company.bankName": "AB SEB bankas",
+  "donate.email": "mes@stipruskartu.lt"
 }

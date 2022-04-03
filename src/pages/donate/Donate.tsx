@@ -1,7 +1,8 @@
 import { memo } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const Donate = () => {
+  const { formatMessage } = useIntl();
   return (
     <div className="max-w-6xl mx-6 md:mx-14 my-16">
       <p className="text-3xl font-bold capitalize mb-16">
@@ -12,16 +13,16 @@ const Donate = () => {
       </p>
 
       <div className="text-base">
-        <p className="font-bold">VŠĮ “Stiprūs kartu”</p>
-        <p>Company code: 305674792</p>
-        <p>Address: P. Vileišio 18A, Vilnius</p>
-        <p>Bank account number: LT387044090101401806</p>
-        <p>AB SEB bankas</p>
+        <p className="font-bold"><FormattedMessage id="donate.company.name"/></p>
+        <p><FormattedMessage id="donate.company.code"/> 305674792</p>
+        <p><FormattedMessage id="donate.company.address"/></p>
+        <p><FormattedMessage id="donate.company.bankAccount"/> LT387044090101401806</p>
+        <p><FormattedMessage id="donate.company.bankName"/></p>
       </div>
 
       <div className="my-3">
         <a href="mailto:mes@stipruskartu.lt" className="text-teal-800 hover:underline">
-          mes@stipruskartu.lt
+          <FormattedMessage id="donate.email"/>
         </a>
       </div>
 
