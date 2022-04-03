@@ -33,7 +33,9 @@ const News = () => {
         </div>
       </div>
       <Link to={LocalRoute.News} className="inline-flex text-teal-800">
-        <p className="capitalize mr-2">more</p>
+        <p className="capitalize mr-2">
+          <FormattedMessage id="news.link.more"/>
+        </p>
         <img className="rounded" src={arrowRight} width={20} height={20} alt="logo" />
       </Link>
     </div>

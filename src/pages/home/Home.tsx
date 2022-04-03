@@ -137,7 +137,7 @@ const Home = () => {
           <div>
             <div className="flex flex-1 flex-row py-4">
               <Link to={LocalRoute.ThankYou} className="hover:underline max-w-xs pr-4 text-teal-800">
-                <FormattedMessage id="thankYou" />
+                <FormattedMessage id="thankYou" />, #
                 <FormattedMessage id="strongTogether" /> <FormattedMessage id="volunteer" />!
               </Link>
               <img className="rounded" src={savanoriaiLogo} width={130} height={90} alt="logo" />
