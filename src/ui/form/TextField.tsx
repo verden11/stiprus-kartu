@@ -1,37 +1,39 @@
-import React from 'react';
-import { TextFieldProps, TextField as MuiTextField } from '@mui/material';
+import { TextField as MuiTextField, TextFieldProps } from '@mui/material';
+import React, { memo } from 'react';
 import { Controller, ControllerProps, Path, PathValue } from 'react-hook-form';
-import { InputType } from 'zlib';
 
-interface Props<T> {
+interface ITextFieldComponent<T> {
   name: Path<T>;
   disabled?: boolean;
   control: ControllerProps<T>['control'];
   defaultValue?: PathValue<T, Path<T>>;
-  noMarginBottom?: boolean;
   isRequired?: boolean;
-  textAlign?: 'left' | 'center' | 'right';
-  type?: InputType;
-  onChanged?(val: string): void;
+  type?: string;
+  onChanged?: (val: string) => void;
 }
 
 const TextFieldComponent = <T extends Record<string, any>>({
   name,
   control,
   onChanged,
-  textAlign,
   defaultValue,
-  noMarginBottom = false,
   type = 'text',
   disabled = false,
   isRequired = false,
   ...props
-}: Props<T> & Omit<TextFieldProps, 'error' | 'onChange'>) => {
+}: ITextFieldComponent<T> & Omit<TextFieldProps, 'error' | 'onChange'>) => {
+  const handleControlledChange = (saveValue: (event: React.ChangeEvent<{ value: string }>) => void) => {
+    return (event: React.ChangeEvent<{ value: string }>) => {
+      saveValue(event);
+      onChanged && onChanged(event.target.value);
+    };
+  };
+
   return (
     <Controller<T>
       name={name}
       control={control}
-      defaultValue={defaultValue ?? ('' as any)}
+      defaultValue={defaultValue}
       rules={{ required: isRequired }}
       render={({ field, fieldState: { error } }) => (
         <MuiTextField
@@ -47,15 +49,7 @@ const TextFieldComponent = <T extends Record<string, any>>({
       )}
     />
   );
-
-  function handleControlledChange(saveValue: (event: React.ChangeEvent<{ value: string }>) => void) {
-    return (event: React.ChangeEvent<{ value: string }>) => {
-      saveValue(event);
-      onChanged && onChanged(event.target.value);
-    };
-  }
 };
 
-const genericMemo: <T>(component: T) => T = React.memo;
-
+const genericMemo: <T>(component: T) => T = memo;
 export const TextField = genericMemo(TextFieldComponent);
