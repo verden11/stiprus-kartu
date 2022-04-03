@@ -1,11 +1,11 @@
 import { TextField as MuiTextField, TextFieldProps } from '@mui/material';
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { Controller, ControllerProps, Path, PathValue } from 'react-hook-form';
 
 interface ITextFieldComponent<T> {
   name: Path<T>;
-  disabled?: boolean;
   control: ControllerProps<T>['control'];
+  disabled?: boolean;
   defaultValue?: PathValue<T, Path<T>>;
   isRequired?: boolean;
   type?: string;
@@ -22,12 +22,14 @@ const TextFieldComponent = <T extends Record<string, any>>({
   isRequired = false,
   ...props
 }: ITextFieldComponent<T> & Omit<TextFieldProps, 'error' | 'onChange'>) => {
-  const handleControlledChange = (saveValue: (event: React.ChangeEvent<{ value: string }>) => void) => {
-    return (event: React.ChangeEvent<{ value: string }>) => {
-      saveValue(event);
-      onChanged && onChanged(event.target.value);
-    };
-  };
+  const handleControlledChange = useCallback(
+    (saveValue: (event: React.ChangeEvent<{ value: string }>) => void) =>
+      (event: React.ChangeEvent<{ value: string }>) => {
+        saveValue(event);
+        onChanged?.(event.target.value);
+      },
+    [onChanged],
+  );
 
   return (
     <Controller<T>

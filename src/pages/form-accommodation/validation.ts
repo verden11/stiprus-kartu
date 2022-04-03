@@ -6,4 +6,4 @@ export const accommodationValidationSchema = yup.object({
   email: yup.string().email('this is email example@mail.com').required('this is required'),
 });
 
-export type AccommodationForm = yup.InferType<typeof accommodationValidationSchema>;
+export type TAccommodationForm = yup.InferType<typeof accommodationValidationSchema>;
