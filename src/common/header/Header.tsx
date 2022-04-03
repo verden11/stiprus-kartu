@@ -40,7 +40,7 @@ const Header = () => {
             setLanguage(event.target.value as Language);
           }}
         >
-          <option value="lt">🇱🇹 Lietuviu</option>
+          <option value="lt">🇱🇹 Lietuvių</option>
           <option value="en">🇬🇧 English</option>
           <option value="ua">🇺🇦 Yкраїнська</option>
         </select>

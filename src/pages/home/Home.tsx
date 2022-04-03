@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import car from '../../assets/car.svg';
 import house from '../../assets/house.svg';
 import logo from '../../assets/stipruskartu_logo.svg';
@@ -12,11 +12,15 @@ import { Link } from 'react-router-dom';
 import { LocalRoute } from '../../common/constants/routes';
 
 const Home = () => {
+  const { formatMessage } = useIntl();
+  
   return (
     <div className="max-w-6xl mx-6 md:mx-14 pt-3">
       <section className="flex flex-1 flex-row-reverse md:flex-row justify-around items-center my-8">
         <img src={logo} width={64} height={64} alt="logo" />
-        <p className="flex-1 md:text-3xl font-bold md:mx-8">Assistance for war refugees from Ukraine</p>
+        <p className="flex-1 md:text-3xl font-bold md:mx-8">
+          <FormattedMessage id="home.title"/>
+        </p>
         <div className="flex-col hidden md:flex">
           <div className="flex flex-col text-sm">
             <a href="tel:1827" className="font-bold text-base">
@@ -35,17 +39,29 @@ const Home = () => {
 
       <section>
         <Card
-          title="Fleeing war in Ukraine?"
-          description="We'll find you a temporary home in Lithuania. Sign up, and our volunteers will take care of you."
-          buttons={[{ text: 'Get help', color: 'bg-amber-700', link: LocalRoute.FormHelp }]}
+          title={formatMessage({id:"home.card.refugee.title"})}
+          description={formatMessage({id:"home.card.refugee.description"})}
+          buttons={[{
+            text: formatMessage({id:"home.card.refugee.button"}),
+            color: 'bg-amber-700',
+            link: LocalRoute.FormHelp
+          }]}
         />
 
         <Card
-          title="Do you have a vacant flat, house, or room? Can you offer a ride?"
-          description="Sign up to help people fleeing war in Ukraine."
+          title={formatMessage({id:"home.card.volunteer.title"})}
+          description={formatMessage({id:"home.card.volunteer.description"})}
           buttons={[
-            { text: 'Offer accommodation', color: 'bg-teal-800', link: LocalRoute.FormAccommodation },
-            { text: 'Offer a ride from the border', color: 'bg-teal-800', link: LocalRoute.FormRide },
+            { 
+              text: formatMessage({id:"home.card.volunteer.button.accomodation"}),
+              color: 'bg-teal-800',
+              link: LocalRoute.FormAccommodation
+            },
+            { 
+              text: formatMessage({id:"home.card.volunteer.button.ride"}),
+              color: 'bg-teal-800',
+              link: LocalRoute.FormRide
+            },
           ]}
         />
       </section>
