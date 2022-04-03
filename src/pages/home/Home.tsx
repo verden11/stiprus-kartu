@@ -67,20 +67,26 @@ const Home = () => {
       </section>
 
       <section className="my-14">
-        <p className="text-2xl font-normal mb-10">People in Lithuania have already offered:</p>
+        <p className="text-2xl font-normal mb-10">
+          <FormattedMessage id="home.statistics.title" />
+        </p>
         <div className="flex flex-1 flex-row justify-around">
           <div className="flex flex-1 flex-wrap justify-center items-center">
             <img width={54} height={54} src={house} alt="hosue" />
             <div className="md:ml-8 flex flex-col items-center">
               <p className="text-4xl font-bold">10119</p>
-              <p className="text-lg text-center">places to stay</p>
+              <p className="text-lg text-center">
+                <FormattedMessage id="home.statistics.placesToStay" />
+              </p>
             </div>
           </div>
           <div className="flex flex-1 flex-wrap justify-center items-center">
             <img width={54} height={54} src={car} alt="car" />
             <div className="md:ml-8 flex flex-col items-center">
               <p className="text-4xl font-bold">5009</p>
-              <p className="text-lg text-center">rides from the border</p>
+              <p className="text-lg text-center">
+                <FormattedMessage id="home.statistics.ridesFromBorder" />
+              </p>
             </div>
           </div>
         </div>
@@ -103,9 +109,15 @@ const Home = () => {
           className="flex flex-1 flex-col items-center text-white py-7 bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${union})` }}
         >
-          <p className="text-3xl font-bold text-center">Ukraine needs you.</p>
-          <p className="text-3xl font-bold text-center mb-7">We're strong together!</p>
-          <p className="text-2xl font-normal text-center">National volunteer support coordination center</p>
+          <p className="text-3xl font-bold text-center">
+            <FormattedMessage id="home.banner.ukraineNeedsYou" />
+          </p>
+          <p className="text-3xl font-bold text-center mb-7">
+            <FormattedMessage id="home.banner.strongTogether"/>
+          </p>
+          <p className="text-2xl font-normal text-center">
+            <FormattedMessage id="home.banner.coordinationCenter" />
+          </p>
         </div>
       </section>
       <section>
@@ -125,7 +137,7 @@ const Home = () => {
           <div>
             <div className="flex flex-1 flex-row py-4">
               <Link to={LocalRoute.ThankYou} className="hover:underline max-w-xs pr-4 text-teal-800">
-                <FormattedMessage id="thankYou" />, #
+                <FormattedMessage id="thankYou" />
                 <FormattedMessage id="strongTogether" /> <FormattedMessage id="volunteer" />!
               </Link>
               <img className="rounded" src={savanoriaiLogo} width={130} height={90} alt="logo" />
@@ -141,7 +153,7 @@ const Home = () => {
       <section className="my-14">
         <div className="flex justify-center py-4">
           <p className="font-bold text-4xl max-w-sm text-center leading-10">
-            #StrongTogether is the initiative of the Pelėdos squad in the Lithuanian Riflemen's Union
+            <FormattedMessage id="home.hashtag.strongTogether" />
           </p>
         </div>
       </section>
