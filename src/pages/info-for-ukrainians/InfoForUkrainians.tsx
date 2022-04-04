@@ -11,7 +11,18 @@ export const InfoForUkrainians = () => {
         <h1 className="font-bold text-3xl">
           <FormattedMessage id="informationForUkrainian" />
         </h1>
-        <p className="my-8">{time}</p>
+        <div className="flex flex-1 justify-between my-8">
+          <p>{time}</p>
+          <iframe
+            title="fb-share"
+            src="https://www.facebook.com/plugins/share_button.php?href=https://stipruskartu.lt/lt/aciu-stipruskartu-savanoriai/&amp;layout=button&amp;size=small&amp;appId=213491853253994&amp;width=67&amp;height=20"
+            width="67"
+            height="20"
+            scrolling="no"
+            allowTransparency
+            allow="encrypted-media"
+          ></iframe>
+        </div>
 
         <div>
           <p className="my-6">
