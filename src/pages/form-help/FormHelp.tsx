@@ -49,7 +49,6 @@ export const FormHelp = () => {
       <p>
         <FormattedMessage id="personalInfo" />
       </p>
-
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-1 flex-col py-6">
         <label htmlFor="fullName">
           <FormattedMessage id="form.fullName" />

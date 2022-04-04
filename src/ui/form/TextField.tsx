@@ -1,6 +1,7 @@
 import { TextField as MuiTextField, TextFieldProps } from '@mui/material';
 import React, { memo, useCallback } from 'react';
 import { Controller, ControllerProps, Path, PathValue } from 'react-hook-form';
+import { genericMemo } from './generick';
 
 interface ITextFieldComponent<T> {
   name: Path<T>;
@@ -53,5 +54,4 @@ const TextFieldComponent = <T extends Record<string, any>>({
   );
 };
 
-const genericMemo: <T>(component: T) => T = memo;
 export const TextField = genericMemo(TextFieldComponent);
