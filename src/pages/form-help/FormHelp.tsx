@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 enum Sex {
@@ -49,7 +49,6 @@ export const FormHelp = () => {
       <p>
         <FormattedMessage id="personalInfo" />
       </p>
-
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-1 flex-col py-6">
         <label htmlFor="fullName">
           <FormattedMessage id="form.fullName" />
