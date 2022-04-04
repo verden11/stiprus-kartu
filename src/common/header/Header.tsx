@@ -19,16 +19,28 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex flex-1 flex-wrap justify-between gap-2">
-        <Link to={LocalRoute.Home} className={cx('capitalize', pathname === LocalRoute.Home && 'text-red-500')}>
+        <Link
+          to={LocalRoute.Home}
+          className={cx('capitalize hover:underline', pathname === LocalRoute.Home && 'text-red-500')}
+        >
           <FormattedMessage id="home" />
         </Link>
-        <Link to={LocalRoute.Donate} className={cx('capitalize', pathname === LocalRoute.Donate && 'text-red-500')}>
+        <Link
+          to={LocalRoute.Donate}
+          className={cx('capitalize hover:underline', pathname === LocalRoute.Donate && 'text-red-500')}
+        >
           <FormattedMessage id="donate" />
         </Link>
-        <Link to={LocalRoute.News} className={cx('capitalize', pathname === LocalRoute.News && 'text-red-500')}>
+        <Link
+          to={LocalRoute.News}
+          className={cx('capitalize hover:underline', pathname === LocalRoute.News && 'text-red-500')}
+        >
           <FormattedMessage id="news" />
         </Link>
-        <Link to={LocalRoute.Info} className={cx('capitalize', pathname === LocalRoute.Info && 'text-red-500')}>
+        <Link
+          to={LocalRoute.Info}
+          className={cx('capitalize hover:underline', pathname === LocalRoute.Info && 'text-red-500')}
+        >
           <FormattedMessage id="info" />
         </Link>
 
@@ -40,9 +52,9 @@ const Header = () => {
             setLanguage(event.target.value as Language);
           }}
         >
-          <option value="lt">🇱🇹 LT</option>
-          <option value="en">🇬🇧 EN</option>
-          <option value="ua">🇺🇦 UK</option>
+          <option value={Language.Lithuanian}>🇱🇹 LT</option>
+          <option value={Language.English}>🇬🇧 EN</option>
+          <option value={Language.Ukrainian}>🇺🇦 UK</option>
         </select>
       </div>
     </div>
