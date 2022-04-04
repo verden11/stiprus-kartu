@@ -47,7 +47,8 @@ const Header = () => {
         <select
           name="language"
           id="language"
-          defaultValue={language}
+          defaultValue={Language.English}
+          value={language}
           onChange={(event) => {
             setLanguage(event.target.value as Language);
           }}

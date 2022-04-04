@@ -15,7 +15,7 @@ const messages = new Map<Language, Record<string, any>>([
 ]);
 
 interface IProvidersContext {
-  language: string;
+  language: Language;
   setLanguage: React.Dispatch<React.SetStateAction<Language>>;
 }
 
