@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { Company } from '../constants';
 
 const fullYear = new Date().getFullYear();
 
@@ -11,13 +12,13 @@ const Footer = () => (
     <div className="flex flex-1 flex-row justify-between flex-wrap">
       <div className="flex-col font-normal text-base leading-5">
         <p>
-          <FormattedMessage id="footer.companyCode" />: 305674792
+          <FormattedMessage id="footer.companyCode" />: {Company.code}
         </p>
         <p>
           <FormattedMessage id="footer.address" />: P. Vileišio 18A, Vilnius
         </p>
         <p>
-          <FormattedMessage id="footer.bankAccount" />: LT387044090101401806
+          <FormattedMessage id="footer.bankAccount" />: {Company.account}
         </p>
         <p>AB SEB bankas</p>
         <p className="text-teal-800 hover:underline">

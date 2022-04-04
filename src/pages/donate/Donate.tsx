@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { Company } from '../../common/constants';
 
 const Donate = () => {
   const { formatMessage } = useIntl();
@@ -13,16 +14,26 @@ const Donate = () => {
       </p>
 
       <div className="text-base">
-        <p className="font-bold"><FormattedMessage id="donate.company.name"/></p>
-        <p><FormattedMessage id="donate.company.code"/> 305674792</p>
-        <p><FormattedMessage id="donate.company.address"/></p>
-        <p><FormattedMessage id="donate.company.bankAccount"/> LT387044090101401806</p>
-        <p><FormattedMessage id="donate.company.bankName"/></p>
+        <p className="font-bold">
+          <FormattedMessage id="donate.company.name" />
+        </p>
+        <p>
+          <FormattedMessage id="donate.company.code" /> {Company.code}
+        </p>
+        <p>
+          <FormattedMessage id="donate.company.address" />
+        </p>
+        <p>
+          <FormattedMessage id="donate.company.bankAccount" /> {Company.account}
+        </p>
+        <p>
+          <FormattedMessage id="donate.company.bankName" />
+        </p>
       </div>
 
       <div className="my-3">
         <a href="mailto:mes@stipruskartu.lt" className="text-teal-800 hover:underline">
-          <FormattedMessage id="donate.email"/>
+          <FormattedMessage id="donate.email" />
         </a>
       </div>
 
@@ -33,7 +44,7 @@ const Donate = () => {
           type="image"
           src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
           name="submit"
-          title="Paremkite"
+          title={formatMessage({ id: 'donate' })}
           alt="Donate with PayPal button"
         />
       </form>
