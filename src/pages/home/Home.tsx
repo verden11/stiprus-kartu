@@ -13,13 +13,13 @@ import { LocalRoute } from '../../common/constants/routes';
 
 const Home = () => {
   const { formatMessage } = useIntl();
-  
+
   return (
     <div className="max-w-6xl mx-6 md:mx-14 pt-3">
       <section className="flex flex-1 flex-row-reverse md:flex-row justify-around items-center my-8">
         <img src={logo} width={64} height={64} alt="logo" />
         <p className="flex-1 md:text-3xl font-bold md:mx-8">
-          <FormattedMessage id="home.title"/>
+          <FormattedMessage id="home.title" />
         </p>
         <div className="flex-col hidden md:flex">
           <div className="flex flex-col text-sm">
@@ -39,28 +39,30 @@ const Home = () => {
 
       <section>
         <Card
-          title={formatMessage({id:"home.card.refugee.title"})}
-          description={formatMessage({id:"home.card.refugee.description"})}
-          buttons={[{
-            text: formatMessage({id:"home.card.refugee.button"}),
-            color: 'bg-amber-700',
-            link: LocalRoute.FormHelp
-          }]}
+          title={formatMessage({ id: 'home.card.refugee.title' })}
+          description={formatMessage({ id: 'home.card.refugee.description' })}
+          buttons={[
+            {
+              text: formatMessage({ id: 'home.card.refugee.button' }),
+              color: 'bg-amber-700',
+              link: LocalRoute.FormHelp,
+            },
+          ]}
         />
 
         <Card
-          title={formatMessage({id:"home.card.volunteer.title"})}
-          description={formatMessage({id:"home.card.volunteer.description"})}
+          title={formatMessage({ id: 'home.card.volunteer.title' })}
+          description={formatMessage({ id: 'home.card.volunteer.description' })}
           buttons={[
-            { 
-              text: formatMessage({id:"home.card.volunteer.button.accomodation"}),
+            {
+              text: formatMessage({ id: 'home.card.volunteer.button.accomodation' }),
               color: 'bg-teal-800',
-              link: LocalRoute.FormAccommodation
+              link: LocalRoute.FormAccommodation,
             },
-            { 
-              text: formatMessage({id:"home.card.volunteer.button.ride"}),
+            {
+              text: formatMessage({ id: 'home.card.volunteer.button.ride' }),
               color: 'bg-teal-800',
-              link: LocalRoute.FormRide
+              link: LocalRoute.FormRide,
             },
           ]}
         />
@@ -113,7 +115,7 @@ const Home = () => {
             <FormattedMessage id="home.banner.ukraineNeedsYou" />
           </p>
           <p className="text-3xl font-bold text-center mb-7">
-            <FormattedMessage id="home.banner.strongTogether"/>
+            <FormattedMessage id="home.banner.strongTogether" />
           </p>
           <p className="text-2xl font-normal text-center">
             <FormattedMessage id="home.banner.coordinationCenter" />
@@ -130,7 +132,7 @@ const Home = () => {
               <Link to={LocalRoute.InfoForUkrainians} className="hover:underline max-w-xs pr-4 uppercase text-teal-800">
                 <FormattedMessage id="informationForUkrainian" />
               </Link>
-              <img className="rounded" src={flag} width={130} height={90} alt="logo" />
+              <img className="rounded" src={flag} width={144} height={90} alt="logo" />
             </div>
           </div>
 
@@ -140,7 +142,7 @@ const Home = () => {
                 <FormattedMessage id="thankYou" />, #
                 <FormattedMessage id="strongTogether" /> <FormattedMessage id="volunteer" />!
               </Link>
-              <img className="rounded" src={savanoriaiLogo} width={130} height={90} alt="logo" />
+              <img className="rounded" src={savanoriaiLogo} width={144} height={90} alt="logo" />
             </div>
           </div>
         </div>

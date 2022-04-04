@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800">
-<rect width="1200" height="800" fill="#005BBB"/>
-<rect width="1200" height="400" y="400" fill="#FFD500"/>
+<svg width="144" height="90" viewBox="0 0 144 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 45H144V85.0001C144 87.7615 141.761 90.0001 139 90.0001H5C2.23857 90.0001 0 87.7615 0 85.0001V45Z"
+    fill="#F8D648" />
+  <path
+    d="M0 45H144V4.9999C144 2.23847 141.761 -0.000102043 139 -0.000102043H5C2.23857 -0.000102043 0 2.23847 0 4.9999V45Z"
+    fill="#3A75C4" />
 </svg>

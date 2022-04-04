@@ -1,9 +1,9 @@
-import { Suspense, lazy } from 'react';
+import { CircularProgress } from '@mui/material';
+import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { LocalRoute } from './common/constants/routes';
-
-const Header = lazy(() => import('./common/header/Header'));
-const Footer = lazy(() => import('./common/footer/Footer'));
+import Footer from './common/footer/Footer';
+import Header from './common/header/Header';
 
 const Home = lazy(() => import('./pages/home/Home'));
 const Donate = lazy(() => import('./pages/donate/Donate'));
@@ -25,7 +25,7 @@ const App = () => {
           <Route
             path={LocalRoute.Home}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <Home />
               </Suspense>
             }
@@ -33,7 +33,7 @@ const App = () => {
           <Route
             path={LocalRoute.Info}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <Info />
               </Suspense>
             }
@@ -41,7 +41,7 @@ const App = () => {
           <Route
             path={LocalRoute.News}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <News />
               </Suspense>
             }
@@ -49,7 +49,7 @@ const App = () => {
           <Route
             path={LocalRoute.InfoForUkrainians}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <InfoForUkrainians />
               </Suspense>
             }
@@ -57,7 +57,7 @@ const App = () => {
           <Route
             path={LocalRoute.ThankYou}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <ThankYou />
               </Suspense>
             }
@@ -65,7 +65,7 @@ const App = () => {
           <Route
             path={LocalRoute.Donate}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <Donate />
               </Suspense>
             }
@@ -73,7 +73,7 @@ const App = () => {
           <Route
             path={LocalRoute.FormHelp}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <FormHelp />
               </Suspense>
             }
@@ -81,7 +81,7 @@ const App = () => {
           <Route
             path={LocalRoute.FormRide}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <FormRide />
               </Suspense>
             }
@@ -89,7 +89,7 @@ const App = () => {
           <Route
             path={LocalRoute.FormAccommodation}
             element={
-              <Suspense fallback={null}>
+              <Suspense fallback={<CircularProgress sx={{ color: '#115e59' }} />}>
                 <FormAccommodation />
               </Suspense>
             }
