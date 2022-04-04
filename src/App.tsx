@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <div className="flex flex-1 justify-center bg-stone-200">
+      <div className="flex flex-1 bg-stone-200">
         <Routes>
           <Route
             path={LocalRoute.Home}
