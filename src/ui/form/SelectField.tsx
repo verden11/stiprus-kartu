@@ -17,7 +17,7 @@ interface ISelectFieldComponent<T> {
   isRequired?: boolean;
   label: string;
   options: SelectOption[];
-  onChanged?(value: string): void;
+  onChanged?: (value: string) => void;
 }
 
 const SelectFieldComponent = <T extends Record<string, any>>({

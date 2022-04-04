@@ -12,7 +12,7 @@ interface ICheckboxFieldComponent<T> {
   disabled?: boolean;
   color?: CheckboxProps['color'];
   defaultValue?: UnpackNestedValue<PathValue<T, Path<T>>>;
-  onChanged?(value: boolean): void;
+  onChanged?: (value: boolean) => void;
 }
 
 const CheckboxFieldComponent = <T extends Record<string, any>>({
