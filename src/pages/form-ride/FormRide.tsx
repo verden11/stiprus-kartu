@@ -1,7 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import { Box, Grid, Button, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography } from '@mui/material';
 import { memo } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { CheckboxField } from '../../ui/form/Checkbox';
 import { TextField } from '../../ui/form/TextField';
 import { rideValidationSchema, TRideForm } from './validation';
@@ -61,7 +61,7 @@ export const FormRide = () => {
           <Grid item xs={12} md={6}>
             <TextField<TRideForm>
               control={control}
-              name="numberOfPasengers"
+              name="numberOfPassengers"
               label="Passengers number"
               fullWidth
               isRequired
@@ -85,7 +85,7 @@ export const FormRide = () => {
             <CheckboxField<TRideForm>
               control={control}
               label="I agree to be contacted when the need arises"
-              name="permisionContact"
+              name="permissionContact"
             />
             <CheckboxField<TRideForm>
               control={control}

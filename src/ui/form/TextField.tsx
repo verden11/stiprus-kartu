@@ -1,7 +1,7 @@
 import { TextField as MuiTextField, TextFieldProps } from '@mui/material';
-import React, { memo, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { Controller, ControllerProps, Path, PathValue } from 'react-hook-form';
-import { genericMemo } from './generick';
+import { genericMemo } from './generic';
 
 interface ITextFieldComponent<T> {
   name: Path<T>;

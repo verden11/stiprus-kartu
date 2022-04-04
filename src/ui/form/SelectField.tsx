@@ -1,14 +1,14 @@
-import React, { ReactNode } from 'react';
-import { Box, FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectChangeEvent } from '@mui/material';
+import { Box, FormControl, FormHelperText, InputLabel, MenuItem, Select } from '@mui/material';
+import { ReactNode } from 'react';
 import { Controller, ControllerProps, Path, PathValue, UnpackNestedValue } from 'react-hook-form';
-import { genericMemo } from './generick';
+import { genericMemo } from './generic';
 
 interface SelectOption<T = string> {
   label: ReactNode;
   value: T;
 }
 
-interface Props<T> {
+interface ISelectFieldComponent<T> {
   name: Path<T>;
   control?: ControllerProps<T>['control'];
   value?: UnpackNestedValue<PathValue<T, Path<T>>>;
@@ -29,7 +29,7 @@ const SelectFieldComponent = <T extends Record<string, any>>({
   defaultValue,
   disabled = false,
   isRequired = false,
-}: Props<T>) => {
+}: ISelectFieldComponent<T>) => {
   return (
     <Box flex={1} display="flex" marginRight={1}>
       <Controller<T>

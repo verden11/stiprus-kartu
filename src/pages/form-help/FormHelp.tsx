@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 enum Sex {
