@@ -38,18 +38,21 @@ const TextFieldComponent = <T extends Record<string, any>>({
       control={control}
       defaultValue={defaultValue}
       rules={{ required: isRequired }}
-      render={({ field, fieldState: { error } }) => (
-        <MuiTextField
-          type={type}
-          error={!!error}
-          required={isRequired}
-          helperText={error?.message}
-          disabled={disabled}
-          {...field}
-          {...props}
-          onChange={handleControlledChange(field.onChange)}
-        />
-      )}
+      render={({ field, fieldState: { error } }) => {
+        const { value, ...fieldProps } = field;
+        return (
+          <MuiTextField
+            type={type}
+            error={!!error}
+            required={isRequired}
+            helperText={error?.message}
+            disabled={disabled}
+            {...fieldProps}
+            {...props}
+            onChange={handleControlledChange(field.onChange)}
+          />
+        );
+      }}
     />
   );
 };

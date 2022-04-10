@@ -48,7 +48,7 @@ const Header = () => {
           name="language"
           id="language"
           value={language}
-          onChange={(event) => {
+          onChange={event => {
             setLanguage(event.target.value as Language);
           }}
         >

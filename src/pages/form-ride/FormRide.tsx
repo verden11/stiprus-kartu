@@ -11,8 +11,13 @@ export const FormRide = () => {
     mode: 'onSubmit',
     resolver: yupResolver(rideValidationSchema),
   });
-  const onSubmit: SubmitHandler<TRideForm> = (data) => {
-    alert(JSON.stringify(data));
+  const onSubmit: SubmitHandler<TRideForm> = data => {
+    console.log(data);
+    fetch(`${import.meta.env.VITE_RIDE_URL}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
   };
 
   return (
@@ -29,19 +34,13 @@ export const FormRide = () => {
             <Typography variant="h6">Personal Info</Typography>
           </Grid>
           <Grid item xs={12} md={6}>
-            <TextField<TRideForm>
-              control={control}
-              name="nameAndSurname"
-              label="Name and surname"
-              fullWidth
-              isRequired
-            />
+            <TextField<TRideForm> control={control} name="full-name" label="Name and surname" fullWidth isRequired />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField<TRideForm> control={control} name="email" label="Email" fullWidth isRequired />
           </Grid>
           <Grid item xs={12} md={6}>
-            <TextField<TRideForm> control={control} name="phoneNo" label="Phone Number" fullWidth isRequired />
+            <TextField<TRideForm> control={control} name="phone" label="Phone Number" fullWidth isRequired />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField<TRideForm> control={control} name="city" label="City" fullWidth isRequired />
@@ -50,31 +49,19 @@ export const FormRide = () => {
             <Typography variant="h6">Vehicle information</Typography>
           </Grid>
           <Grid item xs={12} md={6}>
-            <TextField<TRideForm>
-              control={control}
-              name="carMakeModel"
-              label="Car make and model"
-              fullWidth
-              isRequired
-            />
+            <TextField<TRideForm> control={control} name="car-model" label="Car make and model" fullWidth isRequired />
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField<TRideForm>
               control={control}
-              name="numberOfPassengers"
+              name="passenger-count"
               label="Passengers number"
               fullWidth
               isRequired
             />
           </Grid>
           <Grid item xs={12}>
-            <TextField<TRideForm>
-              control={control}
-              name="extraInfo"
-              label="Additional information"
-              fullWidth
-              multiline
-            />
+            <TextField<TRideForm> control={control} name="info" label="Additional information" fullWidth multiline />
           </Grid>
           <Grid item xs={12} container direction="column">
             <CheckboxField<TRideForm>
@@ -85,14 +72,14 @@ export const FormRide = () => {
             <CheckboxField<TRideForm>
               control={control}
               label="I agree to be contacted when the need arises"
-              name="permissionContact"
+              name="agreement"
             />
             <CheckboxField<TRideForm>
               control={control}
               label="I have read and agree to abide by the volunteer rules"
-              name="permissionVoluntaryRules"
+              name="confirmation"
             />
-            <CheckboxField<TRideForm> control={control} label="I agree to the privacy policy" name="privacyPolicy" />
+            <CheckboxField<TRideForm> control={control} label="I agree to the privacy policy" name="privacy-policy" />
           </Grid>
           <Grid item xs={12}>
             <Button type="submit" variant="outlined" color="primary">
