@@ -11,8 +11,8 @@ export const FormRide = () => {
     mode: 'onSubmit',
     resolver: yupResolver(rideValidationSchema),
   });
+
   const onSubmit: SubmitHandler<TRideForm> = data => {
-    console.log(data);
     fetch(`${import.meta.env.VITE_RIDE_URL}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -21,8 +21,8 @@ export const FormRide = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Box display="flex" justifyContent="center" width="100%" p={5}>
+    <Box display="flex" justifyContent="center" width="100%" p={5}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={2} justifyContent="center">
           <Grid item xs={12}>
             <Typography variant="h3">Can give a ride</Typography>
@@ -87,8 +87,8 @@ export const FormRide = () => {
             </Button>
           </Grid>
         </Grid>
-      </Box>
-    </form>
+      </form>
+    </Box>
   );
 };
 
