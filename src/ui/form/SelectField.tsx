@@ -1,4 +1,4 @@
-import { Box, FormControl, FormHelperText, InputLabel, MenuItem, Select } from '@mui/material';
+import { Box, FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectProps } from '@mui/material';
 import { ReactNode } from 'react';
 import { Controller, ControllerProps, Path, PathValue, UnpackNestedValue } from 'react-hook-form';
 import { genericMemo } from './generic';
@@ -27,9 +27,11 @@ const SelectFieldComponent = <T extends Record<string, any>>({
   options,
   onChanged,
   defaultValue,
+  value,
   disabled = false,
   isRequired = false,
-}: ISelectFieldComponent<T>) => {
+  ...props
+}: ISelectFieldComponent<T> & SelectProps) => {
   return (
     <Box flex={1} display="flex" marginRight={1}>
       <Controller<T>
@@ -45,18 +47,19 @@ const SelectFieldComponent = <T extends Record<string, any>>({
 
             <Select
               {...field}
+              {...props}
               id={name}
+              defaultValue={''}
+              value={value}
               label={label}
               name={name}
               error={!!error}
-              fullWidth
               disabled={disabled}
               required={isRequired}
               onChange={field.onChange}
-              sx={{ minHeight: 36, whiteSpace: 'normal' }}
             >
               {options.map(({ label, value }) => (
-                <MenuItem key={value} value={value} sx={{ maxWidth: 300 }}>
+                <MenuItem key={value} value={value}>
                   {label}
                 </MenuItem>
               ))}
@@ -70,5 +73,3 @@ const SelectFieldComponent = <T extends Record<string, any>>({
 };
 
 export const SelectField = genericMemo(SelectFieldComponent);
-
-export const EMPTY_STR_OPTION: SelectOption = { label: '', value: '' };

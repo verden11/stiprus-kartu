@@ -22,7 +22,7 @@ const TextFieldComponent = <T extends Record<string, any>>({
   disabled = false,
   isRequired = false,
   ...props
-}: ITextFieldComponent<T> & Omit<TextFieldProps, 'error' | 'onChange'>) => {
+}: ITextFieldComponent<T> & TextFieldProps) => {
   const handleControlledChange = useCallback(
     (saveValue: (event: React.ChangeEvent<{ value: string }>) => void) =>
       (event: React.ChangeEvent<{ value: string }>) => {

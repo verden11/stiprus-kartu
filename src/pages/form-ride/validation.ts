@@ -1,9 +1,9 @@
 import * as yup from 'yup';
 
-export enum Sex {
-  Male = 'male',
-  Female = 'female',
-  Other = 'other',
+export enum Gender {
+  Male = 'Male',
+  Female = 'Female',
+  Other = 'Other',
 }
 
 export enum Nationality {
@@ -19,7 +19,7 @@ export const helpValidationSchema = yup.object({
   email: yup.string().email('this is email example@mail.com').required('this is required'),
   phone: yup.string().required('this is required'),
   'birth-date': yup.date().required('this is required'),
-  gender: yup.mixed<Sex>().oneOf(Object.values(Sex)),
+  gender: yup.mixed<Gender>().oneOf(Object.values(Gender)),
   citizenship: yup.mixed<Nationality>().oneOf(Object.values(Nationality)),
 });
 

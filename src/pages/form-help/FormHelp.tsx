@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { SelectField } from '../../ui/form/SelectField';
 import { TextField } from '../../ui/form/TextField';
-import { helpValidationSchema, THelpForm } from '../form-ride/validation';
+import { helpValidationSchema, THelpForm, Gender, Nationality } from '../form-ride/validation';
 
 export const FormHelp = () => {
   const { formatMessage } = useIntl();
@@ -90,24 +90,22 @@ export const FormHelp = () => {
 
           <Grid item xs={12} md={6}>
             <SelectField<THelpForm>
-              // options={Sex}
-              options={[]}
+              options={Object.values(Gender).map(val => ({ label: val, value: val }))}
               control={control}
               name="gender"
               label={formatMessage({ id: 'form.sex' })}
-              // fullWidth
+              fullWidth
               isRequired
             />
           </Grid>
 
           <Grid item xs={12} md={6}>
             <SelectField<THelpForm>
-              // options={Nationality}
-              options={[]}
+              options={Object.values(Nationality).map(val => ({ label: val, value: val }))}
               control={control}
               name="citizenship"
               label={formatMessage({ id: 'form.nationality' })}
-              // fullWidth
+              fullWidth
               isRequired
             />
           </Grid>
