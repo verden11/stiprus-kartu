@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, ReactNode, useState } from 'react';
 import merge from 'deepmerge';
 import { Language } from './common/constants';
 import { IntlProvider } from 'react-intl';
@@ -24,7 +24,7 @@ export const ProvidersContext = createContext<IProvidersContext>({
   setLanguage: () => {},
 });
 
-export const Providers: React.FC = ({ children }) => {
+export const Providers: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState(Language.English);
   return (
     <ProvidersContext.Provider value={{ language, setLanguage }}>
