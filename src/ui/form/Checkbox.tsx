@@ -1,5 +1,5 @@
 import { Box, Checkbox, CheckboxProps, FormControlLabel } from '@mui/material';
-import React, { useCallback } from 'react';
+import React, { ReactNode, useCallback } from 'react';
 import { Controller, ControllerProps, Path, PathValue, UnpackNestedValue } from 'react-hook-form';
 import { genericMemo } from './generic';
 
@@ -8,7 +8,7 @@ interface ICheckboxFieldComponent<T> {
   control: ControllerProps<T>['control'];
   isRequired?: boolean;
   flex?: number;
-  label: string;
+  label: ReactNode;
   disabled?: boolean;
   color?: CheckboxProps['color'];
   defaultValue?: UnpackNestedValue<PathValue<T, Path<T>>>;

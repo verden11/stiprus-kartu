@@ -2,11 +2,13 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Box, Button, Grid, Typography } from '@mui/material';
 import { memo } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useIntl } from 'react-intl';
 import { CheckboxField } from '../../ui/form/Checkbox';
 import { TextField } from '../../ui/form/TextField';
 import { rideValidationSchema, TRideForm } from './validation';
 
 export const FormRide = () => {
+  const { formatMessage } = useIntl();
   const { control, handleSubmit } = useForm<TRideForm>({
     mode: 'onSubmit',
     resolver: yupResolver(rideValidationSchema),
@@ -61,7 +63,13 @@ export const FormRide = () => {
             />
           </Grid>
           <Grid item xs={12}>
-            <TextField<TRideForm> control={control} name="info" label="Additional information" fullWidth multiline />
+            <TextField<TRideForm>
+              control={control}
+              name="info"
+              label={formatMessage({ id: 'additionalInfo' })}
+              fullWidth
+              multiline
+            />
           </Grid>
           <Grid item xs={12} container direction="column">
             <CheckboxField<TRideForm>

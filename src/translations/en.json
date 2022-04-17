@@ -23,6 +23,12 @@
   "form.phone": "Phone number",
   "form.required": "this field is required",
   "form.sex": "Sex",
+  "form.help.people": "People traveling with you",
+  "form.help.number": "Number of people",
+  "form.help.age": "Each person's age in years (separated with commas)",
+  "form.help.situation": "My situation",
+  "form.help.currentCountry": "Country you're currently in",
+  "additionalInfo": "Additional information",
   "fromAbroad": "from abroad",
   "fromLithuania": "from Lithuania",
   "home": "home",
@@ -62,5 +68,6 @@
   "strongTogether2": "Strong Together",
   "temporaryHome": "We'll find you a temporary home in Lithuania (up to 3 months free)",
   "thankYou": "Thank you",
-  "volunteer": "volunteer"
+  "volunteer": "volunteer",
+  "register": "Register"
 }
