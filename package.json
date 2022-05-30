@@ -23,7 +23,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
+    "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
