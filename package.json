@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@date-io/date-fns": "^2.13.1",
-    "@mui/lab": "^5.0.0-alpha.77",
+    "@mui/lab": "^5.0.0-alpha.90",
     "@mui/material": "^5.6.1",
     "date-fns": "^2.28.0",
     "firebase": "^9.6.11",
